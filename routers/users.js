@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken')
 
 
 
+// add a user 
 
 router.post('/',async (req,res)=>{
     let user = new User({
