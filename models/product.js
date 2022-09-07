@@ -31,11 +31,11 @@ const productSchema = mongoose.Schema({
         type:Number,
         default:0
     },
-    category:{
+    category:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Category',
         required:true
-    },
+    }],
     countInStock:{
         type:Number,
         required:true
@@ -45,12 +45,16 @@ const productSchema = mongoose.Schema({
         default:0
     },
     numReviews:{
-        type:Number,
-        default:0
+        type:Number, 
+        default:0 
     },
     isFeatured:{
         type:Boolean,
         default:false
+    },
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
     }
 },
 {timestamps:true});

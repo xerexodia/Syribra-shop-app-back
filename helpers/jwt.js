@@ -22,7 +22,8 @@ function authJwt(){
             },
             '/api/v1/users/login',
             '/api/v1/users/register',
-
+            // '/api/v1/orders',
+ 
         ]
     })
 }
@@ -34,4 +35,4 @@ async function isRevoked(req,payload,done){
     done();
 }
 
-module.exports = authJwt;
+module.exports = authJwt; 

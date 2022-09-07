@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) =>{
     .populate({path:'orderItems',populate:'product'});
 
     if (!order){
-        res.status(500).json({success: false,})
+        res.status(500).json({success: false})
     }
     res.send(order);
 })

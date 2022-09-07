@@ -35,10 +35,10 @@ router.get('/:id', async (req,res)=>{
     }
     res.status(200).send(category);
 })
-
+ 
 router.post('/',async (req,res)=>{
     let category = new Category({
-        name:req.body.name,
+        name:req.body.name, 
         icon:req.body.icon,
         color:req.body.color
     })
